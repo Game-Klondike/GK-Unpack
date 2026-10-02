@@ -21,6 +21,7 @@ jobs:
         run: |
           & .\gk-unpack.exe 2>$null
           if ($LASTEXITCODE -ne 1) { throw "expected exit code 1 without arguments, got $LASTEXITCODE" }
+          exit 0 # the step would otherwise end with the program's own (expected) exit code 1
       - uses: actions/upload-artifact@v4
         with:
           name: gk-unpack
