@@ -1,0 +1,2 @@
+# cmd.exe needs CRLF batch files (labels and goto)
+*.cmd text eol=crlf
